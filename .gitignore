@@ -28,3 +28,10 @@ cmake-build-debug
 cmake-build-release
 cmake-build-relwithdebinfo
 packaging/Output/*
+
+# Temp build dirs and capture artefacts from interactive sessions
+.uibuild/
+.uibuild_*.log
+.tmp/
+.swarm/
+.claude/

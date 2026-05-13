@@ -1,28 +1,37 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "TrenchChassisLayout.h"
+#include "BinaryData.h"
+
+#include <cmath>
 
 //==============================================================================
 PluginProcessor::PluginProcessor()
      : AudioProcessor (BusesProperties()
-                     #if ! JucePlugin_IsMidiEffect
-                      #if ! JucePlugin_IsSynth
-                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
+                      #if ! JucePlugin_IsMidiEffect
+                       #if ! JucePlugin_IsSynth
+                        .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
+                       #endif
+                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                       #endif
-                       .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
-                     #endif
-                       )
+                        ),
+       apvts (*this, nullptr, "TRENCH_STATE", TrenchParameters::createParameterLayout()),
+       authoringSlot (dspBridge)
 {
+    // Default shipping body/cartridge. sonic_tables.json currently identifies P2k_013 at 39062.5 Hz.
+    dspBridge.loadCartridge (juce::String::createStringFromData (BinaryData::sonic_tables_json,
+                                                                 BinaryData::sonic_tables_jsonSize));
+
+    // Seed Documents/TRENCH/ + chassis_variants/ so the user has a known
+    // place to drop variants and a runtime_layout.json to edit "active" in.
+    // Done in the processor (not editor) so the editor stays simple.
+    trench::layout::ensureDevDirs();
 }
 
-PluginProcessor::~PluginProcessor()
-{
-}
+PluginProcessor::~PluginProcessor() = default;
 
 //==============================================================================
-const juce::String PluginProcessor::getName() const
-{
-    return JucePlugin_Name;
-}
+const juce::String PluginProcessor::getName() const { return JucePlugin_Name; }
 
 bool PluginProcessor::acceptsMidi() const
 {
@@ -51,33 +60,16 @@ bool PluginProcessor::isMidiEffect() const
    #endif
 }
 
-double PluginProcessor::getTailLengthSeconds() const
-{
-    return 0.0;
-}
+double PluginProcessor::getTailLengthSeconds() const { return 0.0; }
 
-int PluginProcessor::getNumPrograms()
-{
-    return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
-                // so this should be at least 1, even if you're not really implementing programs.
-}
-
-int PluginProcessor::getCurrentProgram()
-{
-    return 0;
-}
-
-void PluginProcessor::setCurrentProgram (int index)
-{
-    juce::ignoreUnused (index);
-}
-
+int PluginProcessor::getNumPrograms() { return 1; }
+int PluginProcessor::getCurrentProgram() { return 0; }
+void PluginProcessor::setCurrentProgram (int index) { juce::ignoreUnused (index); }
 const juce::String PluginProcessor::getProgramName (int index)
 {
     juce::ignoreUnused (index);
-    return {};
+    return "SPEAKER KNOCKERZ";
 }
-
 void PluginProcessor::changeProgramName (int index, const juce::String& newName)
 {
     juce::ignoreUnused (index, newName);
@@ -86,15 +78,13 @@ void PluginProcessor::changeProgramName (int index, const juce::String& newName)
 //==============================================================================
 void PluginProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
-    juce::ignoreUnused (sampleRate, samplesPerBlock);
+    fixedRateIsland.prepare (sampleRate, samplesPerBlock, dspBridge);
+    setLatencySamples (fixedRateIsland.getLatencySamples());
 }
 
 void PluginProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    dspBridge.reset();
 }
 
 bool PluginProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
@@ -103,13 +93,10 @@ bool PluginProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
     juce::ignoreUnused (layouts);
     return true;
   #else
-    // This is the place where you check if the layout is supported.
-    // In this template code we only support mono or stereo.
     if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono()
      && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
 
-    // This checks if the input layout matches the output layout
    #if ! JucePlugin_IsSynth
     if (layouts.getMainOutputChannelSet() != layouts.getMainInputChannelSet())
         return false;
@@ -119,43 +106,83 @@ bool PluginProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
   #endif
 }
 
-void PluginProcessor::processBlock (juce::AudioBuffer<float>& buffer,
-                                              juce::MidiBuffer& midiMessages)
+void PluginProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ignoreUnused (midiMessages);
-
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
+    for (auto ch = getTotalNumInputChannels(); ch < getTotalNumOutputChannels(); ++ch)
+        buffer.clear (ch, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    TrenchParams params;
+    params.morph = apvts.getRawParameterValue (ParamID::morph)->load();
+    params.q     = apvts.getRawParameterValue (ParamID::q)->load();
+    params.slamDrive = apvts.getRawParameterValue (ParamID::slamDrive)->load();
+    params.fiveD = 0.5f;  // fiveD retired from the UI; pass a fixed placeholder
+
+    if (auto* mp = apvts.getRawParameterValue (ParamID::inputMode))
+        dspBridge.setInputMode (static_cast<int> (mp->load (std::memory_order_relaxed)));
+
+    auto channelPeak = [&buffer] (int channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
-        juce::ignoreUnused (channelData);
-        // ..do something to the data...
+        if (channel >= buffer.getNumChannels() || buffer.getNumSamples() <= 0)
+            return 0.0f;
+
+        const auto* data = buffer.getReadPointer (channel);
+        float peak = 0.0f;
+        for (int i = 0; i < buffer.getNumSamples(); ++i)
+            peak = juce::jmax (peak, std::abs (data[i]));
+
+        return juce::jlimit (0.0f, 1.0f, peak);
+    };
+
+    auto smoothMeter = [] (std::atomic<float>& target, float next)
+    {
+        const float prev = target.load (std::memory_order_relaxed);
+        const float smoothed = next > prev ? next : prev * 0.86f + next * 0.14f;
+        target.store (smoothed, std::memory_order_relaxed);
+    };
+
+    smoothMeter (inputMeterL, channelPeak (0));
+    smoothMeter (inputMeterR, channelPeak (1));
+
+    fixedRateIsland.process (buffer, dspBridge, params);
+
+    // Feed the UI vectorscope with the post-filter stereo signal.
+    if (buffer.getNumSamples() > 0)
+    {
+        const auto* postL = buffer.getReadPointer (0);
+        const auto* postR = buffer.getNumChannels() > 1 ? buffer.getReadPointer (1) : postL;
+        int wp = scopeWritePos.load (std::memory_order_relaxed);
+        for (int i = 0; i < buffer.getNumSamples(); ++i)
+        {
+            scopeL[(size_t) wp].store (postL[i], std::memory_order_relaxed);
+            scopeR[(size_t) wp].store (postR[i], std::memory_order_relaxed);
+            wp = (wp + 1) & (kScopeLen - 1);
+        }
+        scopeWritePos.store (wp, std::memory_order_relaxed);
     }
 }
 
-//==============================================================================
-bool PluginProcessor::hasEditor() const
+int PluginProcessor::copyScopeSamples (float* outL, float* outR, int count) const noexcept
 {
-    return true; // (change this to false if you choose to not supply an editor)
+    if (outL == nullptr || outR == nullptr || count <= 0)
+        return 0;
+
+    count = juce::jmin (count, kScopeLen);
+    const int wp = scopeWritePos.load (std::memory_order_relaxed);
+    // Walk back `count` samples from the write head, emitting oldest -> newest.
+    for (int i = 0; i < count; ++i)
+    {
+        const int idx = (wp - count + i) & (kScopeLen - 1);
+        outL[i] = scopeL[(size_t) idx].load (std::memory_order_relaxed);
+        outR[i] = scopeR[(size_t) idx].load (std::memory_order_relaxed);
+    }
+    return count;
 }
+
+//==============================================================================
+bool PluginProcessor::hasEditor() const { return true; }
 
 juce::AudioProcessorEditor* PluginProcessor::createEditor()
 {
@@ -165,21 +192,19 @@ juce::AudioProcessorEditor* PluginProcessor::createEditor()
 //==============================================================================
 void PluginProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
-    juce::ignoreUnused (destData);
+    auto state = apvts.copyState();
+    std::unique_ptr<juce::XmlElement> xml (state.createXml());
+    copyXmlToBinary (*xml, destData);
 }
 
 void PluginProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
-    juce::ignoreUnused (data, sizeInBytes);
+    std::unique_ptr<juce::XmlElement> xmlState (getXmlFromBinary (data, sizeInBytes));
+    if (xmlState != nullptr && xmlState->hasTagName (apvts.state.getType()))
+        apvts.replaceState (juce::ValueTree::fromXml (*xmlState));
 }
 
 //==============================================================================
-// This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new PluginProcessor();

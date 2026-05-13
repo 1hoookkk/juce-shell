@@ -1,0 +1,147 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Generating TRENCH_artefacts/JuceLibraryCode/TRENCH_resources.rc
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Generating juce_binarydata_Assets/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData.h
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  BinaryData1.cpp
+  BinaryData2.cpp
+  BinaryData3.cpp
+  Generating Code...
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/modules/clap-juce-extensions/CMakeLists.txt
+  clap-juce-extensions.cpp
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  juce_audio_processors.cpp
+  juce_gui_extra.cpp
+  juce_gui_basics.cpp
+  juce_gui_basics_2.cpp
+  juce_gui_basics_3.cpp
+  juce_gui_basics_4.cpp
+  juce_gui_basics_5.cpp
+  juce_graphics.cpp
+  juce_graphics_Harfbuzz.cpp
+  juce_events.cpp
+  juce_core.cpp
+  juce_core_CompilationTime.cpp
+  juce_data_structures.cpp
+  juce_audio_processors_headless.cpp
+  juce_audio_processors_headless_ara.cpp
+  juce_audio_processors_headless_lv2_libs.cpp
+  juce_audio_basics.cpp
+  PluginProcessor.cpp
+  PluginEditor.cpp
+  TrenchParameters.cpp
+  FixedRateTrenchIsland.cpp
+  TrenchShuttleControl.cpp
+  melatonin_inspector.cpp
+  juce_audio_utils.cpp
+  juce_audio_formats.cpp
+  juce_audio_devices.cpp
+  juce_dsp.cpp
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(203,21): warning C4189: 'sy': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(202,21): warning C4189: 'sx': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(217,21): warning C4189: 'sy': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(216,21): warning C4189: 'sx': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  juce_graphics_Sheenbidi.c
+  TRENCH.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\TRENCH_SharedCode.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  juce_audio_plugin_client_AAX.cpp
+  juce_audio_plugin_client_AAX_utils.cpp
+  juce_audio_plugin_client_ARA.cpp
+  juce_audio_plugin_client_LV2.cpp
+  juce_audio_plugin_client_Standalone.cpp
+  juce_audio_plugin_client_Unity.cpp
+  juce_audio_plugin_client_VST2.cpp
+  juce_audio_plugin_client_VST3.cpp
+  Generating Code...
+  Generating code
+  Finished generating code
+  TRENCH_Standalone.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\Standalone\TRENCH.exe
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Generating TRENCH_artefacts/JuceLibraryCode/TRENCH_resources.rc
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Generating juce_binarydata_Assets/JuceLibraryCode/BinaryData1.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData2.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData3.cpp, juce_binarydata_Assets/JuceLibraryCode/BinaryData.h
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  BinaryData1.cpp
+  BinaryData2.cpp
+  BinaryData3.cpp
+  Generating Code...
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/modules/clap-juce-extensions/CMakeLists.txt
+  clap-juce-extensions.cpp
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  juce_audio_processors.cpp
+  juce_gui_extra.cpp
+  juce_gui_basics.cpp
+  juce_gui_basics_2.cpp
+  juce_gui_basics_3.cpp
+  juce_gui_basics_4.cpp
+  juce_gui_basics_5.cpp
+  juce_graphics.cpp
+  juce_graphics_Harfbuzz.cpp
+  juce_events.cpp
+  juce_core.cpp
+  juce_core_CompilationTime.cpp
+  juce_data_structures.cpp
+  juce_audio_processors_headless.cpp
+  juce_audio_processors_headless_ara.cpp
+  juce_audio_processors_headless_lv2_libs.cpp
+  juce_audio_basics.cpp
+  PluginProcessor.cpp
+  PluginEditor.cpp
+  TrenchParameters.cpp
+  FixedRateTrenchIsland.cpp
+  TrenchShuttleControl.cpp
+  melatonin_inspector.cpp
+  juce_audio_utils.cpp
+  juce_audio_formats.cpp
+  juce_audio_devices.cpp
+  juce_dsp.cpp
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(203,21): warning C4189: 'sy': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(202,21): warning C4189: 'sx': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(217,21): warning C4189: 'sy': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(216,21): warning C4189: 'sx': local variable is initialized but not referenced [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  juce_graphics_Sheenbidi.c
+  TRENCH.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\TRENCH_SharedCode.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  juce_VST3ManifestHelper.cpp
+  TRENCH_vst3_helper.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\TRENCH_vst3_helper.exe
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  juce_audio_plugin_client_AAX.cpp
+  juce_audio_plugin_client_AAX_utils.cpp
+  juce_audio_plugin_client_ARA.cpp
+  juce_audio_plugin_client_LV2.cpp
+  juce_audio_plugin_client_Standalone.cpp
+  juce_audio_plugin_client_Unity.cpp
+  juce_audio_plugin_client_VST2.cpp
+  juce_audio_plugin_client_VST3.cpp
+  Generating Code...
+     Creating library C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.lib and object C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.exp
+  Generating code
+  Finished generating code
+  TRENCH_VST3.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\VST3\TRENCH.vst3\Contents\x86_64-win\TRENCH.vst3
+  removing moduleinfo.json
+  creating C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3
+  -- Destination C:\Program Files\Common Files/VST3/TRENCH.vst3 exists, overwriting
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/Resources
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/Resources/moduleinfo.json
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/x86_64-win
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/x86_64-win/TRENCH.vst3
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/desktop.ini
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Plugin.ico

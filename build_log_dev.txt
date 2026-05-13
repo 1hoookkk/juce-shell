@@ -1,0 +1,15 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\TRENCH_SharedCode.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Generating code
+  Finished generating code
+  TRENCH_Standalone.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\Standalone\TRENCH.exe

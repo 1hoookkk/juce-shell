@@ -1,0 +1,78 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\TRENCH_SharedCode.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_vst3_helper.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\TRENCH_vst3_helper.exe
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_VST3.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\VST3\TRENCH.vst3\Contents\x86_64-win\TRENCH.vst3
+  removing moduleinfo.json
+  creating C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3
+  -- Destination C:\Program Files\Common Files/VST3/TRENCH.vst3 exists, overwriting
+  -- Up-to-date: C:\Program Files\Common Files/VST3/TRENCH.vst3
+  -- Up-to-date: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/Resources
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/Resources/moduleinfo.json
+  -- Up-to-date: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/x86_64-win
+  -- Installing: C:\Program Files\Common Files/VST3/TRENCH.vst3/Contents/x86_64-win/TRENCH.vst3
+  CMake Error at C:/Users/hooki/Trench/juce-shell/JUCE/extras/Build/CMake/copyDir.cmake:45 (file):
+    file INSTALL cannot copy file
+    "C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Contents/x86_64-win/TRENCH.vst3"
+    to "C:\Program Files\Common
+    Files/VST3/TRENCH.vst3/Contents/x86_64-win/TRENCH.vst3": Permission denied.
+  
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: The command "setlocal [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -E copy C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/JuceLibraryCode/icon.ico C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Plugin.ico [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: attrib +s C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/desktop.ini [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: attrib +s C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3 [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: setlocal [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -E echo "removing moduleinfo.json" [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -E remove -f C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Contents/moduleinfo.json C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Contents/Resources/moduleinfo.json [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: setlocal [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -E echo "creating C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3" [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -E make_directory C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Contents/Resources [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: Release\TRENCH_vst3_helper.exe > C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3/Contents/Resources/moduleinfo.json [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: setlocal [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: C:\Users\hooki\AppData\Local\Programs\Python\Python310\Lib\site-packages\cmake\data\bin\cmake.exe -Dsrc=C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.vst3 "-Ddest=C:\Program Files\Common Files/VST3" -P C:/Users/hooki/Trench/juce-shell/JUCE/extras/Build/CMake/copyDir.cmake [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(166,5): error MSB3073: :VCEnd" exited with code 1. [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]

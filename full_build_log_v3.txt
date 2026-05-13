@@ -1,0 +1,282 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  PluginProcessor.cpp
+  PluginEditor.cpp
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginProcessor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(46,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(47,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(48,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29): error C2039: 'TrenchValueBox': is not a member of 'trench' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\TrenchLookAndFeel.h(5,11):
+      see declaration of 'trench'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29): error C2065: 'TrenchValueBox': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,10): error C2923: 'std::unique_ptr': 'TrenchValueBox' is not a valid template type argument for parameter '_Ty' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,29):
+      see declaration of 'TrenchValueBox'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,10): error C2976: 'std::unique_ptr': too few template arguments [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.h(49,45): error C2955: 'std::unique_ptr': use of class template requires template argument list [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\TrenchValueBox.h(15,9): error C3861: 'startTimer': identifier not found [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\TrenchValueBox.h(28,30): warning C4996: 'juce::Font::Font': Use the constructor that takes a FontOptions argument [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  (compiling source file '../source/PluginEditor.cpp')
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(13,1): error C2512: 'std::unique_ptr': no appropriate default constructor available [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(41,5): error C2664: 'void PluginEditor::{ctor}::<lambda_2>::operator ()(std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &,const char *) const': cannot convert argument 1 from 'std::unique_ptr' to 'std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(34,100):
+      see declaration of 'PluginEditor::{ctor}::<lambda_2>::operator ()'
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(41,5):
+      while trying to match the argument list '(std::unique_ptr, const char *const )'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(42,5): error C2664: 'void PluginEditor::{ctor}::<lambda_2>::operator ()(std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &,const char *) const': cannot convert argument 1 from 'std::unique_ptr' to 'std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(34,100):
+      see declaration of 'PluginEditor::{ctor}::<lambda_2>::operator ()'
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(42,5):
+      while trying to match the argument list '(std::unique_ptr, const char *const )'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(43,5): error C2664: 'void PluginEditor::{ctor}::<lambda_2>::operator ()(std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &,const char *) const': cannot convert argument 1 from 'std::unique_ptr' to 'std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(34,100):
+      see declaration of 'PluginEditor::{ctor}::<lambda_2>::operator ()'
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(43,5):
+      while trying to match the argument list '(std::unique_ptr, const char *const )'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(44,5): error C2664: 'void PluginEditor::{ctor}::<lambda_2>::operator ()(std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &,const char *) const': cannot convert argument 1 from 'std::unique_ptr' to 'std::unique_ptr<trench::TrenchValueBox,std::default_delete<trench::TrenchValueBox>> &' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(34,100):
+      see declaration of 'PluginEditor::{ctor}::<lambda_2>::operator ()'
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(44,5):
+      while trying to match the argument list '(std::unique_ptr, const char *const )'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(141,25): warning C4996: 'juce::Font::Font': Use the constructor that takes a FontOptions argument [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13): error C2451: a conditional expression of type '_T2' is not valid [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13): error C2451:         with [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13): error C2451:         [ [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13): error C2451:             _T2=std::unique_ptr [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13): error C2451:         ] [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,13):
+      the template instantiation context (the oldest one first) is
+          C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(173,5):
+          see reference to function template instantiation 'auto PluginEditor::resized::<lambda_1>::operator ()<std::unique_ptr<trench::TrenchShuttleControl,std::default_delete<trench::TrenchShuttleControl>>,std::unique_ptr>(int,_T1 &,_T2 &) const' being compiled
+          with
+          [
+              _T1=std::unique_ptr<trench::TrenchShuttleControl,std::default_delete<trench::TrenchShuttleControl>>,
+              _T2=std::unique_ptr
+          ]
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22): error C2678: binary '->': no operator found which takes a left-hand operand of type '_T2' (or there is no acceptable conversion) [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22): error C2678:         with [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22): error C2678:         [ [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22): error C2678:             _T2=std::unique_ptr [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22): error C2678:         ] [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3452,37):
+      could be '_Get_deleter_pointer_type<_Ty,remove_reference<_Ty2>::type,void>::type std::unique_ptr<_Ty,_Dx>::operator ->(void) noexcept const'
+          C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22):
+          '_Get_deleter_pointer_type<_Ty,remove_reference<_Ty2>::type,void>::type std::unique_ptr<_Ty,_Dx>::operator ->(void) noexcept const': cannot convert 'this' pointer from '_T2' to 'const std::unique_ptr<_Ty,_Dx> &'
+          with
+          [
+              _T2=std::unique_ptr
+          ]
+              C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22):
+              Reason: cannot convert from '_T2' to 'const std::unique_ptr<_Ty,_Dx>'
+          with
+          [
+              _T2=std::unique_ptr
+          ]
+              C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22):
+              Conversion requires a second user-defined-conversion operator or constructor
+      C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,22):
+      while trying to match the argument list '(_T2)'
+          with
+          [
+              _T2=std::unique_ptr
+          ]
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(170,31): error C2039: 'setBounds': is not a member of 'std::unique_ptr' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      see declaration of 'std::unique_ptr'
+  
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_vst3_helper.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\TRENCH_vst3_helper.exe

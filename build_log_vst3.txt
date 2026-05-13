@@ -1,0 +1,30 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  PluginProcessor.cpp
+  PluginEditor.cpp
+C:\Users\hooki\Trench\juce-shell\source\PluginEditor.cpp(85,21): error C2248: 'PluginProcessor::dspBridge': cannot access private member declared in class 'PluginProcessor' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.h(43,21):
+      see declaration of 'PluginProcessor::dspBridge'
+      C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.h(8,7):
+      see declaration of 'PluginProcessor'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.cpp(18,76): error C2039: 'sonic_tables_json': is not a member of 'BinaryData' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\build\juce_binarydata_Assets\JuceLibraryCode\BinaryData.h(9,11):
+      see declaration of 'BinaryData'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.cpp(18,76): error C2065: 'sonic_tables_json': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.cpp(18,107): error C2039: 'sonic_tables_jsonSize': is not a member of 'BinaryData' [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+      C:\Users\hooki\Trench\juce-shell\build\juce_binarydata_Assets\JuceLibraryCode\BinaryData.h(9,11):
+      see declaration of 'BinaryData'
+  
+C:\Users\hooki\Trench\juce-shell\source\PluginProcessor.cpp(18,107): error C2065: 'sonic_tables_jsonSize': undeclared identifier [C:\Users\hooki\Trench\juce-shell\build\TRENCH.vcxproj]
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_vst3_helper.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\TRENCH_vst3_helper.exe

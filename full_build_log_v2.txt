@@ -1,0 +1,22 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_rc_lib.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_rc_lib.dir\Release\TRENCH_rc_lib.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  Assets.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\Assets.lib
+  clap_juce_extensions.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\modules\clap-juce-extensions\Release\clap_juce_extensions.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\TRENCH_SharedCode.lib
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+  TRENCH_vst3_helper.vcxproj -> C:\Users\hooki\Trench\juce-shell\build\Release\TRENCH_vst3_helper.exe
+  Building Custom Rule C:/Users/hooki/Trench/juce-shell/CMakeLists.txt
+     Creating library C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.lib and object C:/Users/hooki/Trench/juce-shell/build/TRENCH_artefacts/Release/VST3/TRENCH.exp
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_NtReadFile [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_RtlNtStatusToDosError [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_GetUserProfileDirectoryW [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_NtOpenFile [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_NtCreateNamedPipeFile [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+trench_core.lib(std-fd6defcad76eabd8.std.738e1010a39bc4a5-cgu.0.rcgu.o) : error LNK2001: unresolved external symbol __imp_NtWriteFile [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]
+C:\Users\hooki\Trench\juce-shell\build\TRENCH_artefacts\Release\VST3\TRENCH.vst3\Contents\x86_64-win\TRENCH.vst3 : fatal error LNK1120: 6 unresolved externals [C:\Users\hooki\Trench\juce-shell\build\TRENCH_VST3.vcxproj]

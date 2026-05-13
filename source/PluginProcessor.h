@@ -2,11 +2,15 @@
 
 #include <juce_audio_processors/juce_audio_processors.h>
 
-#if (MSVC)
-#include "ipps.h"
-#endif
+#include "parameters/TrenchParameters.h"
+#include "dsp/TrenchDspBridge.h"
+#include "dsp/FixedRateTrenchIsland.h"
+#include "TrenchAuthoringSlot.h"
 
-class PluginProcessor : public juce::AudioProcessor
+#include <array>
+#include <atomic>
+
+class PluginProcessor final : public juce::AudioProcessor
 {
 public:
     PluginProcessor();
@@ -14,16 +18,13 @@ public:
 
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
     void releaseResources() override;
-
     bool isBusesLayoutSupported (const BusesLayout& layouts) const override;
-
     void processBlock (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
 
     juce::AudioProcessorEditor* createEditor() override;
     bool hasEditor() const override;
 
     const juce::String getName() const override;
-
     bool acceptsMidi() const override;
     bool producesMidi() const override;
     bool isMidiEffect() const override;
@@ -38,6 +39,27 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    juce::AudioProcessorValueTreeState apvts;
+    TrenchDspBridge dspBridge;
+
+    const std::atomic<float>& getInputMeterLeftForUi() const noexcept  { return inputMeterL; }
+    const std::atomic<float>& getInputMeterRightForUi() const noexcept { return inputMeterR; }
+
+    // UI vectorscope feed: copies the most recent `count` post-filter stereo
+    // samples (oldest -> newest) into the caller's buffers. Lock-free, may tear
+    // a frame under contention — fine for a scope. Returns samples written.
+    static constexpr int kScopeLen = 512;
+    int copyScopeSamples (float* outL, float* outR, int count) const noexcept;
+
 private:
+    trench::FixedRateTrenchIsland fixedRateIsland;
+    trench::TrenchAuthoringSlot authoringSlot;
+    std::atomic<float> inputMeterL { 0.0f };
+    std::atomic<float> inputMeterR { 0.0f };
+
+    std::array<std::atomic<float>, kScopeLen> scopeL {};
+    std::array<std::atomic<float>, kScopeLen> scopeR {};
+    std::atomic<int> scopeWritePos { 0 };
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginProcessor)
 };
